@@ -19,8 +19,8 @@ public class WeatherServiceFunction implements Function<WeatherRequest, WeatherR
 
     @Override
     public WeatherResponse apply(WeatherRequest request) {
-        // Here you would implement the logic to call the weather API using the provided request
-        // and return a WeatherResponse based on the fetched data.
+
+        System.out.println("Weather Request: " + request);
 
         RestClient restClient = RestClient.builder()
                 .baseUrl(WEATHER_URL)
@@ -37,6 +37,8 @@ public class WeatherServiceFunction implements Function<WeatherRequest, WeatherR
                               .queryParam("lon", request.lon())
                               .build();
                 }).retrieve().body(WeatherResponse.class);
+
+        System.out.println("Weather Response: " + response);
 
         return response;
 
