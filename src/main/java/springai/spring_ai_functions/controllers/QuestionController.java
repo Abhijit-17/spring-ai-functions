@@ -24,7 +24,7 @@ public class QuestionController {
         this.openAIService = openAIService;
     }
 
-    @GetMapping("/healthCheck")
+    @GetMapping("/healthz")
     public String getMethodName() {
         return "OK";
     }
