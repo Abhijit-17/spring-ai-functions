@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import springai.spring_ai_functions.records.Question;
+import springai.spring_ai_functions.records.WeatherRequest;
+import springai.spring_ai_functions.records.WeatherResponse;
 import springai.spring_ai_functions.records.Answer;
 import springai.spring_ai_functions.services.OpenAIService;
 
@@ -33,6 +35,12 @@ public class QuestionController {
     public Answer postMethodName(@RequestBody Question question) {
         return openAIService.getAnswer(question);
     }
+
+    // @PostMapping("/weather")
+    // public WeatherResponse getCurrentWeather(@RequestBody WeatherRequest weatherRequest) {
+    //     return openAIService.getAnswer(weatherRequest);
+    // }
+    
     
     
 

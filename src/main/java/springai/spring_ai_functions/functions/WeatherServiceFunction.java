@@ -4,9 +4,12 @@ import java.util.function.Function;
 
 import org.springframework.web.client.RestClient;
 
+import com.fasterxml.jackson.annotation.JsonClassDescription;
+
 import springai.spring_ai_functions.records.WeatherRequest;
 import springai.spring_ai_functions.records.WeatherResponse;
 
+@JsonClassDescription("WeatherServiceFunction to fetch weather information")
 public class WeatherServiceFunction implements Function<WeatherRequest, WeatherResponse>{
 
     public static final String WEATHER_URL = "https://api.api-ninjas.com/v1/weather";
