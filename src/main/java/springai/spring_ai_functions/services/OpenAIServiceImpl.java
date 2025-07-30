@@ -25,7 +25,6 @@ import springai.spring_ai_functions.records.WeatherRequest;
 public class OpenAIServiceImpl implements OpenAIService {
 
     private final OpenAiChatModel openAiChatModel;
-    private final ObjectMapper objectMapper;
 
     @Value("${asb.aiapp.apiNinjasKey}")
     private String apiNinjasKey;
